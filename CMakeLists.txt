@@ -40,10 +40,10 @@ pico_set_program_version(intel_decimal "0.1")
 pico_enable_stdio_uart(intel_decimal 0)
 pico_enable_stdio_usb(intel_decimal 1)
 
-# Add Intel BID library path
+# Add Intel Decimal Floating-Point Math Library path
 set(BID_LIBRARY_PATH "${CMAKE_SOURCE_DIR}/gcc111libbid_pico2.a")
 
-# Disable thread-local storage for Intel BID library
+# Disable thread-local storage for Intel Decimal Floating-Point Math Library
 target_compile_definitions(intel_decimal PRIVATE 
     DECIMAL_CALL_BY_REFERENCE=1
     DECIMAL_GLOBAL_ROUNDING=1
@@ -56,7 +56,7 @@ target_link_libraries(intel_decimal
         pico_stdlib
         ${BID_LIBRARY_PATH})
 
-# Add Intel BID header directories
+# Add Intel Decimal Floating-Point Math Library header directories
 target_include_directories(intel_decimal PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
         ${CMAKE_CURRENT_SOURCE_DIR}/intel-bid-pico2/LIBRARY/src

@@ -6,7 +6,7 @@
 #define DECIMAL_GLOBAL_ROUNDING 1
 #define DECIMAL_GLOBAL_EXCEPTION_FLAGS 1
 
-// Intel DFP headers (installed via target_include_directories)
+// Intel Decimal Floating-Point Math Library headers (installed via target_include_directories)
 #include "bid_conf.h"
 #include "bid_functions.h"
 
@@ -15,53 +15,53 @@ void calculator_example()
     BID_UINT128 a, b, c, result;
     char output[64];
 
-    // 初期化
+    // Initialize
     _IDEC_glbflags = BID_EXACT_STATUS;
     _IDEC_glbround = BID_ROUNDING_TO_NEAREST;
 
-    printf("\n=== Intel Decimal Floating-Point 算術関数テスト ===\n");
+    printf("\n=== Intel Decimal Floating-Point Math Library Arithmetic Functions Test ===\n");
 
-    // 基本的な算術演算のテスト
-    printf("\n=== 基本算術演算テスト ===\n");
+    // Basic arithmetic operations test
+    printf("\n=== Basic Arithmetic Operations Test ===\n");
     __bid128_from_string(&a, "123.456");
     __bid128_from_string(&b, "78.9");
     __bid128_from_string(&c, "2.0");
 
-    // 加算
+    // Addition
     __bid128_add(&result, &a, &b);
     __bid128_to_string(output, &result);
     printf("123.456 + 78.9 = %s\n", output);
 
-    // 減算
+    // Subtraction
     __bid128_sub(&result, &a, &b);
     __bid128_to_string(output, &result);
     printf("123.456 - 78.9 = %s\n", output);
 
-    // 乗算
+    // Multiplication
     __bid128_mul(&result, &a, &b);
     __bid128_to_string(output, &result);
     printf("123.456 * 78.9 = %s\n", output);
 
-    // 除算
+    // Division
     __bid128_div(&result, &a, &b);
     __bid128_to_string(output, &result);
     printf("123.456 / 78.9 = %s\n", output);
 
-    // 複合計算: result = (a + b) / c
+    // Compound calculation: result = (a + b) / c
     BID_UINT128 temp;
     __bid128_add(&temp, &a, &b);
     __bid128_div(&result, &temp, &c);
     __bid128_to_string(output, &result);
     printf("(123.456 + 78.9) / 2.0 = %s\n", output);
 
-    // 例外フラグのチェック
+    // Check exception flags
     if (_IDEC_glbflags != BID_EXACT_STATUS)
     {
         printf("Warning: Computation was not exact\n");
     }
 
-    // 三角関数のテスト
-    printf("\n=== 三角関数テスト ===\n");
+    // Trigonometric functions test
+    printf("\n=== Trigonometric Functions Test ===\n");
     __bid128_from_string(&a, "0.5"); // a = 0.5
     __bid128_sin(&result, &a);
     __bid128_to_string(output, &result);
@@ -75,8 +75,8 @@ void calculator_example()
     __bid128_to_string(output, &result);
     printf("tan(0.5) = %s\n", output);
 
-    // 指数・対数関数のテスト
-    printf("\n=== 指数・対数関数テスト ===\n");
+    // Exponential and logarithmic functions test
+    printf("\n=== Exponential and Logarithmic Functions Test ===\n");
     __bid128_from_string(&a, "2.0");
     __bid128_exp(&result, &a);
     __bid128_to_string(output, &result);
@@ -91,8 +91,8 @@ void calculator_example()
     __bid128_to_string(output, &result);
     printf("log10(10.0) = %s\n", output);
 
-    // 平方根・累乗関数のテスト
-    printf("\n=== 平方根・累乗関数テスト ===\n");
+    // Square root and power functions test
+    printf("\n=== Square Root and Power Functions Test ===\n");
     __bid128_from_string(&a, "16.0");
     __bid128_sqrt(&result, &a);
     __bid128_to_string(output, &result);
@@ -104,8 +104,8 @@ void calculator_example()
     __bid128_to_string(output, &result);
     printf("pow(2.0, 3.0) = %s\n", output);
 
-    // 双曲線関数のテスト
-    printf("\n=== 双曲線関数テスト ===\n");
+    // Hyperbolic functions test
+    printf("\n=== Hyperbolic Functions Test ===\n");
     __bid128_from_string(&a, "1.0");
     __bid128_sinh(&result, &a);
     __bid128_to_string(output, &result);
@@ -119,8 +119,8 @@ void calculator_example()
     __bid128_to_string(output, &result);
     printf("tanh(1.0) = %s\n", output);
 
-    // 逆三角関数のテスト
-    printf("\n=== 逆三角関数テスト ===\n");
+    // Inverse trigonometric functions test
+    printf("\n=== Inverse Trigonometric Functions Test ===\n");
     __bid128_from_string(&a, "0.5");
     __bid128_asin(&result, &a);
     __bid128_to_string(output, &result);
@@ -135,8 +135,8 @@ void calculator_example()
     __bid128_to_string(output, &result);
     printf("atan(1.0) = %s\n", output);
 
-    // その他の数学関数のテスト
-    printf("\n=== その他の数学関数テスト ===\n");
+    // Other mathematical functions test
+    printf("\n=== Other Mathematical Functions Test ===\n");
     __bid128_from_string(&a, "-3.7");
     __bid128_round_integral_exact(&result, &a);
     __bid128_to_string(output, &result);
@@ -158,8 +158,8 @@ void calculator_example()
     __bid128_to_string(output, &result);
     printf("quantize(2.5, 3.1) = %s\n", output);
 
-    // 比較関数のテスト
-    printf("\n=== 比較関数テスト ===\n");
+    // Comparison functions test
+    printf("\n=== Comparison Functions Test ===\n");
     __bid128_from_string(&a, "2.5");
     __bid128_from_string(&b, "3.1");
     

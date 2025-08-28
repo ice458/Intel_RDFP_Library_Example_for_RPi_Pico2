@@ -1,10 +1,10 @@
-# Intel Decimal Floating-Point Library for Raspberry Pi Pico
+# Intel Decimal Floating-Point Math Library for Raspberry Pi Pico
 
-This project demonstrates the use of Intel's Decimal Floating-Point (BID) library on the Raspberry Pi Pico 2 microcontroller.
+This project demonstrates the use of Intel's Decimal Floating-Point Math Library on the Raspberry Pi Pico 2 microcontroller.
 
 ## Features
 
-- Intel BID library integration for precise decimal arithmetic
+- Intel Decimal Floating-Point Math Library integration for precise decimal arithmetic
 - Support for 128-bit decimal floating-point operations
 - Mathematical functions (trigonometric, logarithmic, exponential, etc.)
 - Optimized for Raspberry Pi Pico 2 (RP2350)
@@ -38,13 +38,13 @@ This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICE
 
 ### Third-Party Components
 
-- **Intel BID Library**: Copyright (c) 2007-2011, Intel Corp. Licensed under BSD 3-Clause License.
-- **Modified headers** (`bid_conf.h`, `bid_functions.h`): Based on Intel BID library headers with modifications for Pico compatibility.
+- **Intel Decimal Floating-Point Math Library**: Copyright (c) 2007-2011, Intel Corp. Licensed under BSD 3-Clause License.
+- **Modified headers** (`bid_conf.h`, `bid_functions.h`): Based on Intel Decimal Floating-Point Math Library headers with modifications for Pico compatibility.
 
 ## Dependencies
 
 - Raspberry Pi Pico SDK
-- Intel Decimal Floating-Point Library (included as `gcc111libbid_pico2.a`)
+- Intel Decimal Floating-Point Math Library (included as `gcc111libbid_pico2.a`)
 
 ## Hardware Requirements
 

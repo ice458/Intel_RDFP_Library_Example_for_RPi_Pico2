@@ -2,7 +2,7 @@
 
 This project uses third-party software components. The following is a list of these components and their respective licenses:
 
-## Intel Decimal Floating-Point Library (BID)
+## Intel Decimal Floating-Point Math Library
 
 **Files**: `bid_conf.h`, `bid_functions.h`, `gcc111libbid_pico2.a`
 
