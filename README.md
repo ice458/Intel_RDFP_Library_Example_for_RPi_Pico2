@@ -1,4 +1,4 @@
-# Intel Decimal Floating-Point Math Library for Raspberry Pi Pico
+# Intel Decimal Floating-Point Math Library for Raspberry Pi Pico2
 
 This project demonstrates the use of Intel's Decimal Floating-Point Math Library on the Raspberry Pi Pico 2 microcontroller.
 
