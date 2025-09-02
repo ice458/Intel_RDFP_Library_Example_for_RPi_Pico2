@@ -1,3 +1,4 @@
 .vscode
 build
 Intel*
+!licenses/vendor-intel-dfp-eula.txt

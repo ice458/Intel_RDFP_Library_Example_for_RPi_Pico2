@@ -4,11 +4,11 @@ This project uses third-party software components. The following is a list of th
 
 ## Intel Decimal Floating-Point Math Library
 
-**Files**: `bid_conf.h`, `bid_functions.h`, `gcc111libbid_pico2.a`
+Files: `bid_conf.h`, `bid_functions.h`, `gcc111libbid_pico2.a`
 
-**Copyright**: Copyright (c) 2007-2011, Intel Corp.
+Copyright: (c) 2007-2011, Intel Corp. (headers); (c) 2018, Intel Corp. (EULA)
 
-**License**: BSD 3-Clause License
+License: BSD 3-Clause License
 
 ```
 Copyright (c) 2007-2011, Intel Corp.
@@ -39,7 +39,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
 THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
-**Note**: The header files `bid_conf.h` and `bid_functions.h` have been modified for compatibility with the Raspberry Pi Pico platform while preserving the original Intel copyright and license terms.
+Note: The header files `bid_conf.h` and `bid_functions.h` have been lightly modified for Pico compatibility while preserving the original Intel license header. A verbatim copy of Intel's upstream license text is included at `licenses/vendor-intel-dfp-eula.txt` (copied from `IntelRDFPMathLib20U2/eula.txt`, which is ignored by `.gitignore`).
 
 ## Raspberry Pi Pico SDK
 

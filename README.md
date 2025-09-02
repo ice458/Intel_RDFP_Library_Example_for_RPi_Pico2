@@ -13,7 +13,12 @@ This project demonstrates the use of Intel's Decimal Floating-Point Math Library
 
 1. Ensure you have the Pico SDK installed
 2. Clone this repository
-3. Build using CMake:
+3. Recommended: build and flash via the Raspberry Pi Pico VS Code extension tasks:
+   - "Compile Project"
+   - "Run Project" (UF2 load)
+   - "Flash" (OpenOCD)
+   - Rescue/Reset tasks as needed
+4. CLI alternative (generic CMake/Ninja flow):
    ```bash
    mkdir build
    cd build
@@ -34,12 +39,14 @@ The example code in `intel_decimal.c` demonstrates various decimal floating-poin
 
 ## License
 
-This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details.
+- Project code in this repository is under the BSD 3-Clause License. See [LICENSE](LICENSE).
+- Third-party licenses are documented in [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
+- A verbatim copy of Intel's EULA distributed with IntelRDFPMathLib v2.2 is included at `licenses/vendor-intel-dfp-eula.txt` for convenience. Note: the original `IntelRDFPMathLib20U2/eula.txt` is ignored by `.gitignore` and is therefore not committed.
 
 ### Third-Party Components
 
-- **Intel Decimal Floating-Point Math Library**: Copyright (c) 2007-2011, Intel Corp. Licensed under BSD 3-Clause License.
-- **Modified headers** (`bid_conf.h`, `bid_functions.h`): Based on Intel Decimal Floating-Point Math Library headers with modifications for Pico compatibility.
+- Intel Decimal Floating-Point Math Library: BSD 3-Clause (see `licenses/vendor-intel-dfp-eula.txt`).
+- Modified headers (`bid_conf.h`, `bid_functions.h`): Derived from Intel's headers with Pico compatibility tweaks, retaining the original license header.
 
 ## Dependencies
 
