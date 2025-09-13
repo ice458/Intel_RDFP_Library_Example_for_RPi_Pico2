@@ -41,7 +41,7 @@ The example code in `intel_decimal.c` demonstrates various decimal floating-poin
 
 - Project code in this repository is under the BSD 3-Clause License. See [LICENSE](LICENSE).
 - Third-party licenses are documented in [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
-- A verbatim copy of Intel's EULA distributed with IntelRDFPMathLib v2.2 is included at `licenses/vendor-intel-dfp-eula.txt` for convenience. Note: the original `IntelRDFPMathLib20U2/eula.txt` is ignored by `.gitignore` and is therefore not committed.
+- A verbatim copy of Intel's EULA distributed with IntelRDFPMathLib is included at `licenses/vendor-intel-dfp-eula.txt` for convenience. Note: the original `IntelRDFPMathLib20U2/eula.txt` is ignored by `.gitignore` and is therefore not committed.
 
 ### Third-Party Components
 
@@ -57,4 +57,5 @@ The example code in `intel_decimal.c` demonstrates various decimal floating-poin
 
 - Raspberry Pi Pico 2 (RP2350)
 - USB connection for output
+
 
